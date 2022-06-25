@@ -8,9 +8,9 @@ let handler = async (m, { conn }) => {
   if (!cita) throw false
   await conn.sendFile(m.chat, cita, cita, null, m, true, { mimetype: 'audio/mp4' })
 }
-handler.customPrefix = /^cita ?cita$/i
-handler.command = new RegExp
+handler.help = ['cita']
 handler.tags = ['fun']
+handler.command = /^(cita)$/i
 handler.limit = true
 handler.mods = false 
 handler.premium = false
