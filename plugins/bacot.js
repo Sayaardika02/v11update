@@ -1,39 +1,5 @@
-const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys')
-let fs = require('fs')
-let handler = async (m) => {
-    let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-    else who = m.sender
-    let user = global.db.data.users[who]
-let anu =`
-─────〔 *Bacot* 〕─────
-
-${pickRandom(global.bacot)}
-`
-conn.sendUrlButton(m.chat, anu, '📍instagram', instagram, 'bacot', '.bacot', m)
-}
-handler.help = ['bacot']
-handler.tags = ['quotes']
-handler.command = /^(bacot)$/i
-handler.owner = false
-handler.mods = false
-handler.limit = true
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-
-module.exports = handler
-
-function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())]
-}
-
-global.bacot = [
+let handler  = async (m, { conn }) => {
+let bacot = [
 'Kamu suka kopi nggak? Aku sih suka. Tau kenapa alesannya? Kopi itu ibarat kamu, pahit sih tapi bikin candu jadi pingin terus.',
 'Gajian itu kayak mantan ya? Bisanya cuman lewat sebentar saja.',
 'Kata pak haji, cowok yang nggak mau pergi Sholat Jumat disuruh pakai rok aja.',
@@ -68,3 +34,21 @@ global.bacot = [
 'Ingat! Anda itu jomblo',
 'Gak tau mau ngetik apa',
 ]
+let dia = bacot[Math.floor(Math.random() * bacot.length)]
+  conn.reply(m.chat,`“${dia}”`, m)
+}
+handler.help = ['bacot']
+handler.tags = ['quotes']
+handler.command = /^(bucin)$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+handler.limit = true
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+
+module.exports = handler
