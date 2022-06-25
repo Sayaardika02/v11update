@@ -61,6 +61,7 @@ global.author = sticker_author
 global.wm = '© BOT WHATSAPP 2022'
 
 global.multiplier = 1000 // The higher, The harder levelup
+global.instagram = 'https://instagram.com/pinomodz'
 
 global.rpg = {
   emoticon(string) {
