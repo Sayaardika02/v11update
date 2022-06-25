@@ -17,6 +17,7 @@ handler.tags = ['quotes']
 handler.command = /^(bacot)$/i
 handler.owner = false
 handler.mods = false
+handler.limit = true
 handler.premium = false
 handler.group = false
 handler.private = false
