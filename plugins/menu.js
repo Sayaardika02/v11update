@@ -175,12 +175,12 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website',
-                                    url: 'https://Ainebot.github.io/'
+                                    url: 'https://pinorecode.github.io/'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Donasi',
-                                    id: '/donasi'
+                                    displayText: 'My Group',
+                                    url: 'https://chat.whatsapp.com/CmlrDN2xl0lCl4eBHLe6IJ'
                                 }
                             }, {
                                 quickReplyButton: {
